@@ -191,7 +191,7 @@ class PagePropertiesApiSaveForm extends ApiBase {
 				if ( $value === "" ) {
 					continue;
 				}
-				if ( !empty( $value ) || in_array( $key, $inheritableBooleanKeys ) ) {
+				if ( !empty( $value ) || in_array( $key, $inheritableBooleanKeys ) || $key === 'input-config' ) {
 					if ( array_key_exists( $key, $types ) ) {
 						settype( $value, $types[$key] );
 					}

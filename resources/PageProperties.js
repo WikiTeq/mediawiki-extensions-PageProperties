@@ -595,7 +595,10 @@ const PageProperties = function (
 			}
 		}
 
-		if ( !( 'input-config' in field ) ) {
+		if (
+			!( 'input-config' in field )
+			|| ( 'input-config' in field && Array.isArray(field['input-config']) && field['input-config'].length === 0 )
+		) {
 			field[ 'input-config' ] = {};
 		}
 		// create shallow copy, otherwise changes are

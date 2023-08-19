@@ -946,6 +946,7 @@ const PagePropertiesInputConfig = function ( windowManager ) {
 		var data = this.data;
 		var items = [];
 		var obj = getInputConfig( InputName );
+		Model = {};
 
 		for ( var i in obj ) {
 			if ( !( i in SelectedItems ) ) {

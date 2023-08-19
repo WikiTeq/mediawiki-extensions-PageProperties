@@ -1465,7 +1465,8 @@ class PageProperties {
 					$parsedAsk,
 					!empty( $field['askquery-printouts'] ) ? $field['askquery-printouts'] : [],
 					// 'limit' => !empty( $field['options-limit'] ) && is_int( $field['options-limit'] ) ? $field['options-limit'] : 100
-					[],
+					// TODO: refactor
+					[ 'limit' => 1000000 ],
 					!empty( $field['askquery-subject'] )
 				);
 
